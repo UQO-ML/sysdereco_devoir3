@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (trop volumineux pour git)
+data/raw/
+data/processed/*.png
+
+# Environnement
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Docker volumes
+fuseki_data/
