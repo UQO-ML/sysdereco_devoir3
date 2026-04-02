@@ -23,3 +23,6 @@ data/processed/*.png
 
 # Docker volumes
 fuseki_data/
+
+# Results
+results/
