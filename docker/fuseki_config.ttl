@@ -21,4 +21,4 @@
     ] .
 
 <#baseModel> a tdb2:GraphTDB2 ;
-    tdb2:location "/fuseki/databases/recommendations" .
+    tdb2:location "/jena-fuseki/databases/recommendations" .
