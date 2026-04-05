@@ -1,0 +1,1062 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#"
+     xml:base="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:reco="http://www.inf6083.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco/"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:inf6083-sysdereco="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#hasCategory">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#hasInteractedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#hasInteractedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#inLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#inLanguage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#isRatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#isRatedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#likesCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#likesCategory">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#mayLike -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#mayLike">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#popularInCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#popularInCategory">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#publishedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#publishedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Publisher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ratesBook -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ratesBook">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#similarTaste -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#similarTaste">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#writtenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#writtenBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#averageRating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#averageRating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#bookId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#bookId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#languageName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#languageName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Language"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#publisherName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#publisherName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Publisher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ratingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ratingValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#subtitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#subtitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#title">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#userId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#userId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Author"/>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Language"/>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Publisher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Publisher"/>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating"/>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ChiltonBooks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ChiltonBooks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Dune -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Dune">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ScienceFiction"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ChiltonBooks"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#FrankHerbert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#English -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#English">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Fantasy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Fantasy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HighFantasy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HighFantasy -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HighFantasy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#FrankHerbert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#FrankHerbert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HarperCollins -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HarperCollins">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Publisher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HighFantasy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HighFantasy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#JRRTolkien -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#JRRTolkien">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Author"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#JaneDoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#JaneDoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+        <likesCategory rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Fantasy"/>
+        <likesCategory rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HighFantasy"/>
+        <mayLike rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#TheLordOfTheRings"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#JohnDoe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#JohnDoe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+        <hasInteractedWith rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Dune"/>
+        <likesCategory rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ScienceFiction"/>
+        <mayLike rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Dune"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating"/>
+        <isRatedBy rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#JohnDoe"/>
+        <ratesBook rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Dune"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating"/>
+        <isRatedBy rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#JaneDoe"/>
+        <ratesBook rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#TheLordOfTheRings"/>
+        <ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</ratingValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ScienceFiction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ScienceFiction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#TheLordOfTheRings -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#TheLordOfTheRings">
+        <rdf:type rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Fantasy"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HighFantasy"/>
+        <inLanguage rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#English"/>
+        <publishedBy rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#HarperCollins"/>
+        <writtenBy rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#JRRTolkien"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="u">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="rating">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="u1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="u2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="avgRating">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Si un utilisateur a noté un livre d’une catégorie avec une note supérieure ou égale à 4.0, alors cette catégorie lui plaît.</rdfs:comment>
+        <rdfs:label>R1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+                        <swrl:argument1 rdf:resource="u"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating"/>
+                                <swrl:argument1 rdf:resource="r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+                                        <swrl:argument1 rdf:resource="i"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+                                                <swrl:argument1 rdf:resource="c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#isRatedBy"/>
+                                                        <swrl:argument1 rdf:resource="r"/>
+                                                        <swrl:argument2 rdf:resource="u"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ratesBook"/>
+                                                                <swrl:argument1 rdf:resource="r"/>
+                                                                <swrl:argument2 rdf:resource="i"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#hasCategory"/>
+                                                                        <swrl:argument1 rdf:resource="i"/>
+                                                                        <swrl:argument2 rdf:resource="c"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ratingValue"/>
+                                                                                <swrl:argument1 rdf:resource="r"/>
+                                                                                <swrl:argument2 rdf:resource="rating"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                                        <swrl:arguments>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:resource="rating"/>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</rdf:first>
+                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </swrl:arguments>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#likesCategory"/>
+                        <swrl:argument1 rdf:resource="u"/>
+                        <swrl:argument2 rdf:resource="c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Si un utilisateur A aime une catégorie et qu&apos;un utilisateur B avec des goûts similaires a noté un livre de cette catégorie avec une note supérieure ou égale à 4.0, alors ce livre peut être recommandé à l&apos;utilisateur A</rdfs:comment>
+        <rdfs:label>R5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+                        <swrl:argument1 rdf:resource="u1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+                                <swrl:argument1 rdf:resource="u2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+                                        <swrl:argument1 rdf:resource="i"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+                                                <swrl:argument1 rdf:resource="c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Rating"/>
+                                                        <swrl:argument1 rdf:resource="r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#similarTaste"/>
+                                                                <swrl:argument1 rdf:resource="u1"/>
+                                                                <swrl:argument2 rdf:resource="u2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#likesCategory"/>
+                                                                        <swrl:argument1 rdf:resource="u1"/>
+                                                                        <swrl:argument2 rdf:resource="c"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#isRatedBy"/>
+                                                                                <swrl:argument1 rdf:resource="r"/>
+                                                                                <swrl:argument2 rdf:resource="u2"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ratesBook"/>
+                                                                                        <swrl:argument1 rdf:resource="r"/>
+                                                                                        <swrl:argument2 rdf:resource="i"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#hasCategory"/>
+                                                                                                <swrl:argument1 rdf:resource="i"/>
+                                                                                                <swrl:argument2 rdf:resource="c"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#ratingValue"/>
+                                                                                                        <swrl:argument1 rdf:resource="r"/>
+                                                                                                        <swrl:argument2 rdf:resource="rating"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                                                                <swrl:arguments>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first rdf:resource="rating"/>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</rdf:first>
+                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                    </rdf:Description>
+                                                                                                                </swrl:arguments>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#mayLike"/>
+                        <swrl:argument1 rdf:resource="u1"/>
+                        <swrl:argument2 rdf:resource="i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Si un utilisateur aime une catégorie et qu&apos;un livre appartient à cette catégorie, alors ce livre peut être recommandé à l&apos;utilisateur</rdfs:comment>
+        <rdfs:label>R2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+                        <swrl:argument1 rdf:resource="u"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+                                <swrl:argument1 rdf:resource="i"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+                                        <swrl:argument1 rdf:resource="c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#likesCategory"/>
+                                                <swrl:argument1 rdf:resource="u"/>
+                                                <swrl:argument2 rdf:resource="c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#hasCategory"/>
+                                                        <swrl:argument1 rdf:resource="i"/>
+                                                        <swrl:argument2 rdf:resource="c"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#mayLike"/>
+                        <swrl:argument1 rdf:resource="u"/>
+                        <swrl:argument2 rdf:resource="i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Si un livre d&apos;une catégorie a une note moyenne supérieure ou égale à 4.0, alors il est considéré comme populaire dans cette catégorie</rdfs:comment>
+        <rdfs:label>R4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Book"/>
+                        <swrl:argument1 rdf:resource="i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#Category"/>
+                                <swrl:argument1 rdf:resource="c"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#hasCategory"/>
+                                        <swrl:argument1 rdf:resource="i"/>
+                                        <swrl:argument2 rdf:resource="c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#averageRating"/>
+                                                <swrl:argument1 rdf:resource="i"/>
+                                                <swrl:argument2 rdf:resource="avgRating"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="avgRating"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#popularInCategory"/>
+                        <swrl:argument1 rdf:resource="i"/>
+                        <swrl:argument2 rdf:resource="c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Si deux utilisateurs aiment la même catégorie, alors ils ont des goûts similaires</rdfs:comment>
+        <rdfs:label>R3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+                        <swrl:argument1 rdf:resource="u1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#User"/>
+                                <swrl:argument1 rdf:resource="u2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="u1"/>
+                                        <swrl:argument2 rdf:resource="u2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco#similarTaste"/>
+                        <swrl:argument1 rdf:resource="u1"/>
+                        <swrl:argument2 rdf:resource="u2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
