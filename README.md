@@ -161,6 +161,7 @@ Exemple de résultat (type Response) :
   }
 }
 ```
+Pour l'étape des règles d'inférence, ces dernières devront être appliquées depuis le notebook (R1 -> R2 -> R3 -> R4 -> R5). L'ordre est important car les dernières règles dépendent des résultats obtenus des précédentes.
 
 ---
 
