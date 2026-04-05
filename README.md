@@ -17,9 +17,7 @@
 ├── data/
 │   └── joining/                   
 │       └── temporal_pre_split     # Données P2
-├── docker/
-│   └── fuseki/
-│       └── fuseki_config.ttl  # Configuration Fuseki
+├── fuseki_config.ttl              # Configuration Fuseki
 ├── ontology/
 │   ├── sysdereco.owl              # Ontologie OWL de base (2.1)
 │   ├── sysdereco_inferred.owl     # Ontologie OWL inferrée (2.2)
