@@ -7,7 +7,7 @@ services:
     ports:
       - "3030:3030"
     environment:
-      ADMIN_PASSWORD: admin123
+      ADMIN_PASSWORD: ${FUSEKI_PASSWORD}
     volumes:
       - fuseki_data:/fuseki/databases
     restart: unless-stopped

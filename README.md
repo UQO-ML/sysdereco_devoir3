@@ -115,8 +115,7 @@ cp .env.example .env
 
 ```bash
 # Lancer Fuseki en arrière-plan
-docker-compose build
-docker-compose up -d
+docker-compose up --build
 
 # Vérifier que le conteneur est actif
 docker-compose ps
@@ -131,8 +130,8 @@ Interface web - Chargement des ontologies et triplets
 1. Créer un dataset `recommendations` (type persistant `TDB2`)
 2. Dans la gestion des datasets, accéder à l'ajout de données `add data`
 3. Charger les deux fichiers :
-    - Étape 1 - Ontologie de base : `ontology/sysdereco.owl`& `ontology/sysdereco.ttl``
-    - Étape 2 - Ontologie avec règles d'inférence : `ontology/sysdereco_inferred.owl` & `ontology/sysdereco.ttl``
+    - Étape 1 - Ontologie de base : `ontology/sysdereco.owl`& `ontology/sysdereco.ttl`
+    - Étape 2 - Ontologie avec règles d'inférence : `ontology/sysdereco_inferred.owl` & `ontology/sysdereco.ttl`
 4. Vérifier dans `query` le bon chargement des fichiers (nombre de triplets > 0) :
 ```sql
 # Nombre total de triplets
@@ -165,12 +164,12 @@ Pour l'étape des règles d'inférence, ces dernières devront être appliquées
 
 ## Arrêter les services
 
-```powershell
+```bash
 # Arrêter Fuseki
-docker compose down
+docker-compose down
 
 # Arrêter et supprimer les données persistantes
-docker compose down -v
+docker-compose down -v
 ```
 
 ---
@@ -204,7 +203,7 @@ docker compose down -v
     ```
   - **R3** : *Si deux utilisateurs aiment la même catégorie, alors ils ont des goûts similaires.*
     ```
-    User(?u1) ∧ User(?u2) ∧ differentFrom(?u1, ?u2) -> similarTaste(?u1, ?u2)
+    User(?u1) ∧ User(?u2) ∧ Category(?c) ∧ differentFrom(?u1, ?u2) ∧ likesCategory(?u1, ?c) ∧ likesCategory(?u2, ?c) -> similarTaste(?u1, ?u2)
     ```
   - **R4** : *Si un livre d'une catégorie a une note moyenne supérieure ou égale à 4.0, alors il est considéré comme populaire dans cette catégorie.*
     ```

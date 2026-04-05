@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.inf6083.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco/"
-     xml:base="http://www.inf6083.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco/"
+<rdf:RDF xmlns="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco/"
+     xml:base="http://www.semanticweb.org/candhigomvie/ontologies/2026/3/inf6083-sysdereco/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
