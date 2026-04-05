@@ -93,8 +93,7 @@ cp .env.example .env
 
 ```bash
 # Lancer Fuseki en arrière-plan
-mkdir -p fuseki_data
-chmod 777 fuseki_data ontology docker/fuseki_config.ttl
+cp .env.example .env
 # Utilisez la commande suivante :
 docker compose up -d
 # Sinon, si vous voulez builder l'image vous-même, utilisez la commande suivante :
