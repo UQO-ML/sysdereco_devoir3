@@ -27,11 +27,9 @@ data/*
 .idea/
 
 # Docker volumes
-fuseki_data/
+fuseki_data/*
 !fuseki_data/.gitkeep
 
 # Results
 results/*
 !results/.gitkeep
-fuseki_data/*
-!fuseki_data/.gitkeep
