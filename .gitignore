@@ -6,13 +6,18 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+!*/**/.gitkeep
 
 # Jupyter
 .ipynb_checkpoints/
 
 # Data (trop volumineux pour git)
-data/raw/
-data/processed/*.png
+*.pkl
+*.parquet
+*.npz
+*.npy
+data/*
+!data/.gitkeep
 
 # Environnement
 .env
@@ -23,6 +28,10 @@ data/processed/*.png
 
 # Docker volumes
 fuseki_data/
+!fuseki_data/.gitkeep
 
 # Results
-results/
+results/*
+!results/.gitkeep
+fuseki_data/*
+!fuseki_data/.gitkeep

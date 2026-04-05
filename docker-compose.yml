@@ -1,16 +1,20 @@
-version: "3.8"
-
 services:
   fuseki:
-    build: .
+    image: stain/jena-fuseki
+    # build:
+    #   context: .
+    #   dockerfile: docker/Dockerfile
     container_name: inf6083_fuseki
     ports:
       - "3030:3030"
+    user: fuseki
     environment:
       ADMIN_PASSWORD: ${FUSEKI_PASSWORD}
     volumes:
-      - fuseki_data:/fuseki/databases
-    restart: unless-stopped
-
-volumes:
-  fuseki_data:
+      - ./docker/fuseki_config.ttl:/jena-fuseki/config.ttl:rw
+      - ./fuseki_data:/jena-fuseki/databases:rw
+      - ./ontology:/jena-fuseki/data:rw
+    command: >
+      sh -c "mkdir -p /jena-fuseki/databases/recommendations &&
+         exec /jena-fuseki/fuseki-server --config=/jena-fuseki/config.ttl"
+    restart: "no"

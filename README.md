@@ -11,7 +11,7 @@
 .
 ├── notebook_devoir3.ipynb         # Notebook principal
 ├── Dockerfile
-├── docker-compose.yml             # Apache Fuseki (triplestore RDF)
+├── docker compose.yml             # Apache Fuseki (triplestore RDF)
 ├── requirements.txt
 ├── .env                           # Variables d'environnement (URL Fuseki, etc.)
 ├── data/
@@ -60,28 +60,6 @@ Récupérer les fichiers suivants depuis le projet P2, dans `data/joining/tempor
 - item_titles.npy 
 - top_n_indices_10.npy
 
-**Le plus rapide étant de créer une archive :**
-
-```bash
-cd /sysdereco_devoir2/
-tar -czf p3_artifacts_temporal_pre_split.tar.gz \
-  -C data/joining/temporal_pre_split \
-  train_interactions.parquet \
-  test_interactions.parquet \
-  books_representation_sparse.npz \
-  user_profiles_tfidf.npz \
-  user_ids.npy \
-  item_ids.npy \
-  item_titles.npy \
-  top_n_indices_10.npy
-```
-
-Et de la décompresser dans `data/joining/temporal_pre_split/` dans ce projet (P3):
-
-```bash
-mkdir -p data/joining/temporal_pre_split
-tar -xzf p3_artifacts_temporal_pre_split.tar.gz -C data/joining/temporal_pre_split
-```
 
 ### 3. Créer et activer l'environnement virtuel Python
 
@@ -92,7 +70,7 @@ python -m venv .venv
 # Activer (Windows PowerShell)
 .\.venv\Scripts\Activate.ps1
 
-# Sur macOS / Linux
+# Sur macOS / Linux(dependant du shell utilisé)
 source .venv/bin/activate
 ```
 
@@ -115,13 +93,17 @@ cp .env.example .env
 
 ```bash
 # Lancer Fuseki en arrière-plan
-docker-compose up --build
-
+mkdir -p fuseki_data
+chmod 777 fuseki_data ontology docker/fuseki_config.ttl
+# Utilisez la commande suivante :
+docker compose up -d
+# Sinon, si vous voulez builder l'image vous-même, utilisez la commande suivante :
+docker compose up --build
 # Vérifier que le conteneur est actif
-docker-compose ps
-
+docker compose ps
 # Voir les logs
-docker-compose logs -f
+docker compose logs -f
+# Ou executer docker compose up sans -d pour voir les logs en direct
 ```
 
 Fuseki sera disponible sur **[http://localhost:3030](http://localhost:3030)**
@@ -213,7 +195,7 @@ docker-compose down -v
     ```
     User(?u1) ∧ User(?u2) ∧ Book(?i) ∧ Category(?c) ∧ Rating(?r) ∧ similarTaste(?u1, ?u2) ∧ likesCategory(?u1, ?c) ∧ isRatedBy(?r, ?u2) ∧ ratesBook(?r, ?i) ∧ hasCategory(?i, ?c) ∧ ratingValue(?r, ?rating) ∧ swrlb:greaterThanOrEqual(?rating, 4.0) -> mayLike(?u1, ?i)
     ```
-- Triplestore : Apache Jena Fuseki (via Docker-compose)
+- Triplestore : Apache Jena Fuseki (via Docker compose)
 - Interrogation : SPARQL via Fuseki ou lignes de commande
 
 **Exemples de requêtes SPARQL suite à l'ajout de règles d'inférence**
