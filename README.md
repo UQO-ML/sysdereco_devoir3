@@ -113,7 +113,7 @@ Interface web - Chargement des ontologies et triplets
 3. Charger les deux fichiers :
     - Étape 1 - Ontologie de base : `ontology/sysdereco.owl`& `ontology/sysdereco.ttl`
     - Étape 2 - Ontologie avec règles d'inférence : `ontology/sysdereco_inferred.owl` & `ontology/sysdereco.ttl`
-4. Vérifier dans `query` le bon chargement des fichiers (nombre de triplets > 0) :
+4. Vérifier dans `query` le bon chargement des fichiers (nombre de triplets > 1000000) :
 ```sql
 # Nombre total de triplets
 SELECT (COUNT(*) as ?count) {?s ?p ?o}
