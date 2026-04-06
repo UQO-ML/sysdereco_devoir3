@@ -10,14 +10,15 @@
 ```
 .
 ├── notebook_devoir3.ipynb         # Notebook principal
-├── Dockerfile
 ├── docker compose.yml             # Apache Fuseki (triplestore RDF)
 ├── requirements.txt
 ├── .env                           # Variables d'environnement (URL Fuseki, etc.)
+├── docker/
+│   ├── Dockerfile
+│   └── fuseki_config.ttl          # Configuration Fuseki      
 ├── data/
 │   └── joining/                   
 │       └── temporal_pre_split     # Données P2
-├── fuseki_config.ttl              # Configuration Fuseki
 ├── ontology/
 │   ├── sysdereco.owl              # Ontologie OWL de base (2.1)
 │   ├── sysdereco_inferred.owl     # Ontologie OWL inferrée (2.2)
@@ -147,10 +148,10 @@ Pour l'étape des règles d'inférence, ces dernières devront être appliquées
 
 ```bash
 # Arrêter Fuseki
-docker-compose down
+docker compose down
 
 # Arrêter et supprimer les données persistantes
-docker-compose down -v
+docker compose down -v
 ```
 
 ---
@@ -205,5 +206,13 @@ SELECT ?user ?category WHERE {
   ?user reco:likesCategory ?category .
 }
 ```
+Retrouver les livres explicitement liés à une catégorie appréciée :
+```sql
+SELECT ?i WHERE {
+  reco:JaneDoe reco:likesCategory ?category .
+  ?i reco:hasCategory ?category .
+}
+```
+
 
 
