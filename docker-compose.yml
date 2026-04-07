@@ -10,6 +10,7 @@ services:
     user: fuseki
     environment:
       ADMIN_PASSWORD: ${FUSEKI_PASSWORD}
+      JVM_ARGS: "-Xms16g -Xmx32g"
     volumes:
       - ./docker/fuseki_config.ttl:/jena-fuseki/config.ttl:rw
       - ./fuseki_data:/jena-fuseki/databases:rw

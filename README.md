@@ -10,13 +10,13 @@
 ```
 .
 ├── notebook_devoir3.ipynb         # Notebook principal
-├── Dockerfile
-├── docker compose.yml             # Apache Fuseki (triplestore RDF)
+├── docker-compose.yml             # Apache Fuseki (triplestore RDF)
 ├── requirements.txt
 ├── .env                           # Variables d'environnement (URL Fuseki, etc.)
 ├── data/
-│   └── joining/                   
-│       └── temporal_pre_split     # Données P2
+│   └── temporal_pre_split         # Données P2
+├── docker/
+│   └── Dockerfile
 ├── fuseki_config.ttl              # Configuration Fuseki
 ├── ontology/
 │   ├── sysdereco.owl              # Ontologie OWL de base (2.1)
@@ -48,7 +48,7 @@ git clone https://github.com/UQO-ML/sysdereco_devoir3.git
 
 ### 2. Préparer les artefacts réutilisés depuis le projet 2
 
-Récupérer les fichiers suivants depuis le projet P2, dans `data/joining/temporal_pre_split` :
+Récupérer les fichiers suivants depuis le projet P2, dans `data/temporal_pre_split` :
 
 - temporal_pre_split 
 - train_interactions.parquet 
@@ -105,41 +105,36 @@ docker compose logs -f
 # Ou executer docker compose up sans -d pour voir les logs en direct
 ```
 
-Fuseki sera disponible sur **[http://localhost:3030](http://localhost:3030)**
+Fuseki sera disponible sur **[http://localhost:3030](http://localhost:3030)**.
 
-Interface web - Chargement des ontologies et triplets
-1. Créer un dataset `recommendations` (type persistant `TDB2`)
-2. Dans la gestion des datasets, accéder à l'ajout de données `add data`
-3. Charger les deux fichiers :
-    - Étape 1 - Ontologie de base : `ontology/sysdereco.owl`& `ontology/sysdereco.ttl`
-    - Étape 2 - Ontologie avec règles d'inférence : `ontology/sysdereco_inferred.owl` & `ontology/sysdereco.ttl`
-4. Vérifier dans `query` le bon chargement des fichiers (nombre de triplets > 1000000) :
-```sql
-# Nombre total de triplets
-SELECT (COUNT(*) as ?count) {?s ?p ?o}
-```
-Exemple de résultat (type Response) :
-```bash
-{
-  "head": {
-    "vars": [
-      "count"
-    ]
-  },
-  "results": {
-    "bindings": [
-      {
-        "count": {
-          "type": "literal",
-          "datatype": "http://www.w3.org/2001/XMLSchema#integer",
-          "value": "1400582"
-        }
-      }
-    ]
-  }
-}
-```
-Pour l'étape des règles d'inférence, ces dernières devront être appliquées depuis le notebook (R1 -> R2 -> R3 -> R4 -> R5). L'ordre est important car les dernières règles dépendent des résultats obtenus des précédentes.
+Le notebook gère automatiquement le chargement RDF nécessaire à la Tâche 2 :
+- base explicite : `ontology/sysdereco.owl` + `ontology/sysdereco.ttl` ;
+- scénario inféré : même base + application `R1 -> R2 -> R3 -> R4 -> R5`.
+
+Le chargement manuel via l'interface web Fuseki reste possible pour inspection/debug, mais il n'est pas requis pour l'exécution standard du notebook.
+
+### 8. Exécution recommandée de la Tâche 2 (comparaison base vs inférence)
+
+Le notebook implémente une section dédiée qui automatise le flux suivant :
+
+1. **Scénario base explicite** : `sysdereco.owl + sysdereco.ttl` (sans R1-R5)
+2. **Scénario avec inférence** : `sysdereco.owl + sysdereco.ttl` puis application `R1 -> R2 -> R3 -> R4 -> R5`
+3. Calcul des métriques top-N du scénario KG avec le même protocole que T0/T1
+4. Tableau comparatif final `T0/T1/T2`
+5. Validation ciblée de `R5` (delta sur `mayLike` avec fallback minimal)
+
+Ce flux répond à l'exigence du sujet de comparer les résultats **sans inférence** puis **avec inférence**.
+
+Pour accélérer l'exécution, la section comparative T2 fonctionne en **single-load** :
+- un chargement du dataset de base ;
+- puis transition `base -> inference` sans second `CLEAR+LOAD`.
+
+La section d'export en fin de notebook produit les artefacts suivants dans `results/` :
+
+- `task2_kg_scenarios_summary.csv`
+- `task2_t0_t1_t2_comparison.csv`
+- `task2_advanced_queries_base_vs_inference.csv`
+- `task2_results_bundle.json`
 
 ---
 
@@ -147,10 +142,10 @@ Pour l'étape des règles d'inférence, ces dernières devront être appliquées
 
 ```bash
 # Arrêter Fuseki
-docker-compose down
+docker compose down
 
 # Arrêter et supprimer les données persistantes
-docker-compose down -v
+docker compose down -v
 ```
 
 ---
