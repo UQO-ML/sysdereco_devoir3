@@ -13,6 +13,9 @@
 ├── docker-compose.yml             # Apache Fuseki (triplestore RDF)
 ├── requirements.txt
 ├── .env                           # Variables d'environnement (URL Fuseki, etc.)
+├── docker/
+│   ├── Dockerfile
+│   └── fuseki_config.ttl          # Configuration Fuseki      
 ├── data/
 │   └── temporal_pre_split         # Données P2
 ├── docker/
@@ -200,5 +203,13 @@ SELECT ?user ?category WHERE {
   ?user reco:likesCategory ?category .
 }
 ```
+Retrouver les livres explicitement liés à une catégorie appréciée :
+```sql
+SELECT ?i WHERE {
+  reco:JaneDoe reco:likesCategory ?category .
+  ?i reco:hasCategory ?category .
+}
+```
+
 
 
