@@ -1,18 +1,24 @@
 # Python
-.venv/
+.venv*
+.venv-p3/
 __pycache__/
 *.pyc
 *.pyo
 *.egg-info/
 dist/
 build/
+!*/**/.gitkeep
 
 # Jupyter
 .ipynb_checkpoints/
 
 # Data (trop volumineux pour git)
-data/raw/
-data/processed/*.png
+*.pkl
+*.parquet
+*.npz
+*.npy
+data/*
+!data/.gitkeep
 
 # Environnement
 .env
@@ -22,7 +28,9 @@ data/processed/*.png
 .idea/
 
 # Docker volumes
-fuseki_data/
+fuseki_data/*
+!fuseki_data/.gitkeep
 
 # Results
-results/
+results/*
+!results/.gitkeep

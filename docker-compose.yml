@@ -1,24 +1,20 @@
-version: "3.9"
-
 services:
   fuseki:
-    image: stain/jena-fuseki:4.10.0
+    image: stain/jena-fuseki
+    # build:
+    #   context: .
+    #   dockerfile: docker/Dockerfile
     container_name: inf6083_fuseki
     ports:
       - "3030:3030"
+    user: fuseki
     environment:
-      ADMIN_PASSWORD: admin123
-      FUSEKI_DATASET_1: /recommendations
+      ADMIN_PASSWORD: ${FUSEKI_PASSWORD}
     volumes:
-      - fuseki_data:/fuseki
-      - ./docker/fuseki:/fuseki/configuration:ro
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3030/$/ping"]
-      interval: 15s
-      timeout: 5s
-      retries: 5
-
-volumes:
-  fuseki_data:
-    name: inf6083_fuseki_data
+      - ./docker/fuseki_config.ttl:/jena-fuseki/config.ttl:rw
+      - ./fuseki_data:/jena-fuseki/databases:rw
+      - ./ontology:/jena-fuseki/data:rw
+    command: >
+      sh -c "mkdir -p /jena-fuseki/databases/recommendations &&
+         exec /jena-fuseki/fuseki-server --config=/jena-fuseki/config.ttl"
+    restart: "no"
